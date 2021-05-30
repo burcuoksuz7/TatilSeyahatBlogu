@@ -1,0 +1,81 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Iletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+
+</head>
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>İletişim</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102101.87489177402!2d30.648064892000814!3d36.89791699551206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39aaeddadadc1%3A0x95c69f73f9e32e33!2sAntalya!5e0!3m2!1str!2str!4v1621970869759!5m2!1str!2str"
+                                width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3 style="color:maroon">Bize Ulaşın !</h3>
+                    <br />
+
+
+
+                    @foreach (var x in Model)
+                    {
+
+
+                        <div class="panel panel-danger" style="width:1000px">
+                            <div class="panel-body"><h4 style="color:maroon">Mail Adresi</h4> <br /> <b>@x.Mail</b></div>
+
+                        </div>
+
+                        <div class="panel panel-danger" style="width:1000px">
+                            <div class="panel-body"><h4 style="color:maroon">Yetkili</h4> <br /> <b>@x.Yetkili</b></div>
+                        </div>
+
+                        <div class="panel panel-danger" style="width:1000px">
+                            <div class="panel-body"><h4 style="color:maroon">Konum</h4> <br /> <b>@x.Konum</b></div>
+                        </div>
+                        <div class=""><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class=" btn btn-danger">Mail Gönder</a> </div>
+                    }
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+        <br />
+    </div>
+   
+</body>
+</html>
+
+
+
+

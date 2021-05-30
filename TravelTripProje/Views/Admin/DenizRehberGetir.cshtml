@@ -1,0 +1,43 @@
+﻿@model TravelTripProje.Models.Siniflar.DenizTatil
+@{
+    ViewBag.Title = "DenizRehberGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Deniz Rehber Güncelleme Sayfası</h3>
+<br />
+@using (Html.BeginForm("DenizRehberDuzenle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik1)
+    @Html.TextBoxFor(x => x.Baslik1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama1)
+    @Html.TextAreaFor(x => x.Aciklama1, new { rows = "15", cols = "70", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Foto1)
+    @Html.TextBoxFor(x => x.Foto1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Baslik2)
+    @Html.TextBoxFor(x => x.Baslik2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama2)
+    @Html.TextAreaFor(x => x.Aciklama2, new { rows = "15", cols = "70", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Foto2)
+    @Html.TextBoxFor(x => x.Foto2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Baslik3)
+    @Html.TextBoxFor(x => x.Baslik3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama3)
+    @Html.TextAreaFor(x => x.Aciklama3, new { rows = "15", cols = "70", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Foto3)
+    @Html.TextBoxFor(x => x.Foto3, new { @class = "form-control" })
+    <br />
+    <button class="btn pull-right btn-primary">Düzenle</button>
+}
+

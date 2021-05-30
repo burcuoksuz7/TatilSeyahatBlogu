@@ -1,0 +1,45 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Kamp>
+@{
+    ViewBag.Title = "KampRehber";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Rehber | Kamp İşlemleri</h3>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık 1</th>
+        <th>Açıklama 1</th>
+        <th>Görsel 1</th>
+        <th>Başlık 2</th>
+        <th>Açıklama 2</th>
+        <th>Görsel 2</th>
+        <th>Başlık 3</th>
+        <th>Açıklama 3</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.ID</th>
+            <td>@x.Baslik1</td>
+            <td>@x.Aciklama1.Substring(0, 100)...</td>
+            <td>
+                <img src="@x.Foto1" style="width:70px; height:45px" ; />
+            </td>
+            <td>@x.Baslik2</td>
+            <td>@x.Aciklama2.Substring(0, 100)...</td>
+            <td>
+                <img src="@x.Foto2" style="width:70px; height:45px" ; />
+            </td>            
+            <td>@x.Baslik3</td>
+            <td>@x.Aciklama3.Substring(0, 100)...</td>           
+            <td><a href="/Admin/KampRehberGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,29 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Kamp>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <div class="ornek" style="width:900px;margin:auto;">
+                @foreach (var x in Model)
+                {
+                    <br />
+                    <h3>@x.Baslik1</h3>
+                    <p><font face="tahoma" size="3"> @x.Aciklama1</font></p>
+                    <h3>@x.Baslik2</h3>
+                    <img src="@x.Foto1" style="float:left;padding:0 10px 10px 0">
+                    <p><font face="tahoma" size="3"> @x.Aciklama2</font></p>
+                    <h3>@x.Baslik3</h3>
+                    <img src="@x.Foto2" style="float:left;padding:0 10px 10px 0">
+                    <p><font face="tahoma" size="3"> @x.Aciklama3</font></p>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
